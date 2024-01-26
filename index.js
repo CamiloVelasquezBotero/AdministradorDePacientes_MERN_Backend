@@ -14,16 +14,13 @@ dotenv.config();
 conectarDB(); 
 
 // configuraciones de CORS
-const dominiosPermitidos = [process.env.FRONTEND_URL]; 
-const corsOptions = {   
-    origin: function(origin, callback) {
-        if(dominiosPermitidos.indexOf(origin) !== -1) { 
-            callback(null, true); 
-        } else { 
-            callback(new Error('No permitido, por CORS'));
-        }
-    }
-}
+const allowedOrigin = process.env.FRONTEND_URL
+const corsOptions = {
+    origin: allowedOrigin,
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    credentials: true,
+    optionsSuccessStatus: 204,
+  };
 app.use(cors(corsOptions));
 
 app.use("/api/veterinarios", veterinarioRoutes); 
