@@ -10,4 +10,4 @@ Se hace uso de **JsonWebToken** para verificar y obtener el perfil del Veterinar
 
 ### Preview: https://administrador-de-pacientes-mern-frontend.vercel.app/
 ### Cuenta de prueba para ingresar: 
-Usuario: prueba@prueba.com  |  Contraseña: passwords
+Usuario: prueba@prueba.com  |  Contraseña: password
